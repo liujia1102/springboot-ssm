@@ -21,7 +21,10 @@
 			<tr>
 				<th>${d.did }</th>
 				<th>${d.dname }</th>
-				<th>操作</th>
+				<th>
+					<a type="button" class="btn btn-primary btn-sm">修改</a>&nbsp;&nbsp;&nbsp;
+					<a type="button" class="btn btn-danger btn-sm" href="/depts/delete/${d.did }">删除</a>
+				</th>
 			</tr>
 		</s:forEach>
 	</table>
