@@ -37,7 +37,7 @@ public class DeptServiceImpl implements DeptService {
 	}
 
 	@Override
-	public List<Dept> findAll(Dept dept) {
+	public List<Dept> findAll() {
 		return deptMapper.selectByExample(null);
 	}
 

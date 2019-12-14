@@ -1,9 +1,11 @@
 package com.woniu.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.woniu.domain.Dept;
 import com.woniu.service.DeptService;
@@ -16,9 +18,15 @@ public class DeptController {
 	private DeptService ds;
 	
 	@RequestMapping("save")
-	@ResponseBody
 	public String save(Dept dept) {
 		ds.save(dept);
-		return null;
+		return "redirect:/depts/findAll";
 	}
+	@RequestMapping("findAll")
+	public String findAll(Model model) {
+		List<Dept> deptList = ds.findAll();
+		model.addAttribute("deptList", deptList);
+		return "depts/list";
+	}
+	
 }

@@ -13,5 +13,5 @@ public interface DeptService {
 
 	Dept findOne(Integer did);
 
-	List<Dept> findAll(Dept dept);
+	List<Dept> findAll();
 }

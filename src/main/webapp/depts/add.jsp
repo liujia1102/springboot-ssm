@@ -7,6 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	hello
+	<form action="/depts/save" method="post">
+		deptname:<input type="text" name="dname" />
+		<button type="submit">添加</button>
+	</form>
 </body>
 </html>

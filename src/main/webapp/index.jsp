@@ -10,20 +10,20 @@
 <meta charset="utf-8">
 <title>Insert title here</title>
 <style type="text/css">
-.container {
+#div1 {
 	margin-top: 10px;
 	height: 700px;
 }
 </style>
 </head>
 <body>
-	<div class="container">
-		<div class="row">
+	<div class="container" id="div1">
+		<div class="row" >
 			<div class="col-md-2">
 				<ul>
 					<li>部门管理</li>
 					<ul>
-						<li>查看部门</li>
+						<li><a href="/depts/findAll" target="if">查看部门</a></li>
 						<li><a href="/depts/add.jsp" target="if">添加部门</a></li>
 					</ul>
 				</ul>
