@@ -1,9 +1,12 @@
 package com.woniu.dao;
 
+import java.util.List;
+import java.util.Map;
+
+import org.apache.ibatis.annotations.Param;
+
 import com.woniu.domain.Dept;
 import com.woniu.domain.DeptExample;
-import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
 public interface DeptMapper {
     long countByExample(DeptExample example);
@@ -27,4 +30,6 @@ public interface DeptMapper {
     int updateByPrimaryKeySelective(Dept record);
 
     int updateByPrimaryKey(Dept record);
+    
+    List<Dept> selectByPage(Map map);
 }

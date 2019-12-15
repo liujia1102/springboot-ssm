@@ -240,28 +240,4 @@
       did = #{did,jdbcType=INTEGER}
     where eid = #{eid,jdbcType=INTEGER}
   </update>
-  
-  <select id="selectByPage" parameterType="java.util.Map" resultType="com.woniu.domain.Emp">
-  	select * from emp
-  	limit #{startLine},#{size}
-  </select>
-  <select id="selectWithDept" resultMap="rm">
-  	SELECT * FROM emp e LEFT JOIN dept d
-	ON e.`did`=d.`did`
-  </select>
-  <resultMap type="com.woniu.domain.Emp" id="rm">
-  	<id property="eid" column="eid"></id>
-  	<result property="ename" column="ename" />
-  	<result property="gender" column="gender" />
-  	<result property="sal" column="sal" />
-  	<result property="hiredate" column="hiredate" />
-  	<result property="photo" column="photo" />
-  	<result property="did" column="did" />
-  	<association property="dept" javaType="com.woniu.domain.Dept">
-  		<id property="did" column="did"></id>
-  		<result property="dname" column="dname" />
-  	</association>
-  
-  
-  </resultMap>
 </mapper>

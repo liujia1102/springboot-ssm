@@ -161,4 +161,12 @@
     set dname = #{dname,jdbcType=VARCHAR}
     where did = #{did,jdbcType=INTEGER}
   </update>
+  
+  
+  
+  
+  <select id="selectByPage" parameterType="java.util.Map" resultType="com.woniu.domain.Dept">
+  	select * from dept
+  	limit #{startLine},#{size}
+  </select>
 </mapper>

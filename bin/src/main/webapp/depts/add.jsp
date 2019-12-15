@@ -3,7 +3,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
 <meta charset="utf-8">
 <title>Insert title here</title>
 </head>
